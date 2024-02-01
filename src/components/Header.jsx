@@ -10,13 +10,13 @@ function Header(){
 
            
             <div className="p-3  backdrop-blur-sm bg-white/30">
-                <div className='flex inline mr-10 space-x-8'>
-                    <h3>00 HOME</h3>
-                    <h3>01 DESTINATION</h3>
-                    <h3>02 CREW</h3>
-                    <h4>03 TECHNOLOGY</h4>
+                <ul className='flex inline mr-10 space-x-8 font-secondary text-base text-slate-200'>
+                    <li><a className='hover:border-b hover:pb-3.5 hover:border-slate-300' >00 HOME</a></li>
+                    <li><a href='/Home'>01 DESTINATION</a></li>
+                    <li>02 CREW</li>
+                    <li>03 TECHNOLOGY</li>
 
-                </div>
+                </ul>
                 
 
             </div>

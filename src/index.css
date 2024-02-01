@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+    font-family: "Bellefair";
+    src: local('Bellefair-Regular'),
+    url('./Fonts/Bellefair/Bellefair-Regular.ttf') format("truetype");
+
+    font-family: "Barlow_Condensed";
+    src: local('BarlowCondensed-Regular'),
+    url('./Fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf') format('truetype');
+
+}
