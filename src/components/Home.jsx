@@ -4,7 +4,7 @@ import Background_Desktop from '../assets/images/home/background-home-desktop.jp
 function Home(){
 
     return(
-        <div className="bg-cover h-screen" style={{backgroundImage: `url(${Background_Desktop})`}}>
+        <div className="bg-cover h-screen overflow-hidden" style={{backgroundImage: `url(${Background_Desktop})`}}>
 
             <Header/>
             <div className="grid lg:grid-cols-2 items-center h-full">
