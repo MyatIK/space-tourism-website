@@ -17,7 +17,7 @@ function Slider(){
                     return (
                     <div className=" mt-10 w-5/6 grid md:grid-cols-2 gap-3 w-full flex-shrink-0 items-center transition-transform ease-out duration-500" 
                             style={{transform:`translateX(-${current * 100}%)`}}>
-                        <div className='w-5/6 mx-auto relative'>
+                        <div className='w-5/6 mx-auto relative order-last md:order-first'>
                             <div>
 
                                 <h2 className='text-slate-400 mb-3 font-primary'>{crewMapped.role.toUpperCase()}</h2>

@@ -5,7 +5,7 @@ import Background_Desktop from '/crew/background-crew-desktop.jpg'
 function Crew(){
 
     return(
-        <div className="bg-cover h-screen" style={{backgroundImage: `url(${Background_Desktop})`}}>
+        <div className="bg-cover h-screen text-center md:text-left" style={{backgroundImage: `url(${Background_Desktop})`}}>
             <div>
                 <Header/>
 
