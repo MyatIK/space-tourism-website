@@ -2,18 +2,15 @@ import Logo from '../assets/images/shared/logo.svg';
 import Menu from '../assets/images/shared/icon-hamburger.svg';
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/master
 function Header(){
     return(
 
-        <div className="flex ml-10 inline justify-between pt-10 ">
+        <div className="flex ml-10 inline justify-between pt-10 relative">
             <img src={Logo} alt='Logo' className='mr-5 w-8 h-8'/>
             
-            <div className='w-48 border-t border-gray-300 mt-6 hidden sm:visible'></div>
+            <div className='md:48 border-t border-gray-300 mt-6 hidden sm:visible'></div>
 
            
             <div className="p-3  md:backdrop-blur-sm md:bg-white/30 invisible sm:visible">
@@ -25,15 +22,10 @@ function Header(){
 
                 </ul>
             
-
             </div>
-<<<<<<< HEAD
             
             
             <img src={Menu} alt='hamburger menu' className='visible md:hidden w-8 h-8 absolute right-10'/>
-=======
-            <img src={Menu} alt='hamburger menu' className='visible md:hidden w-8 h-8 mr-5'/>
->>>>>>> origin/master
             
 
 
