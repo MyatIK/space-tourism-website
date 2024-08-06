@@ -16,14 +16,14 @@ function Header(){
     return(
         
 
-        <div className="flex ml-10 inline justify-between pt-10 relative">
-            <img src={Logo} alt='Logo' className='mr-5 w-8 h-8'/>
+        <div className="flex ml-10 inline justify-between sm:pt-10 relative">
+            <img src={Logo} alt='Logo' className='mr-5 mt-10 md:mt-5 w-8 h-8'/>
             
-            <div className='md:48 border-t border-gray-300 mt-6 hidden sm:visible'></div>
+            <div className='sm:48 border-t border-gray-300 mt-6 invisible sm:visible'></div>
 
            
-            <div className="p-3  md:backdrop-blur-sm md:bg-white/30 invisible sm:visible">
-                <ul className='flex inline mr-10 space-x-8 font-secondary text-base text-slate-200'>
+            <div className="p-5 w-1/2  md:backdrop-blur-sm md:bg-white/20 invisible md:visible absolute right-0">
+                <ul className='flex inline mr-10 space-x-8 font-secondary text-base text-slate-200 ml-20'>
                     <Link to="/"><li className='hover:underline hover:underline-offset-8'>00 HOME</li></Link>
                     <Link to="/destination"><li className='hover:underline hover:underline-offset-8'>01 DESTINATION</li></Link>
                     <Link to="/crew"><li className='hover:underline hover:underline-offset-8'>02 CREW</li></Link>
@@ -33,18 +33,19 @@ function Header(){
             
             </div>
             {isOpen ? 
-            <button>
-                <img src={Menu} alt='hamburger menu' className='visible md:hidden w-8 h-8 absolute right-10' onClick={ToggleSide}/>
-            
-            </button>:
 
-            <div className="w-3/4 h-screen backdrop-blur-sm bg-white/10 visible md:invisible absolute right-0 top-0">
-                <button className='absolute right-5 top-5'>
-                    <img src={Closed} alt="exit button" onClick={ToggleSide}/>
+            <div className="w-3/4 h-screen backdrop-blur-lg bg-white/10 visible md:hidden absolute right-0 top-0">
+                <div className='flex justify-end mr-10 mt-10'>
+                    <button>
+                        <img src={Closed} alt="exit button" onClick={ToggleSide}/>
 
-                </button>
+                    </button>
 
-                <ul className='mr-10 space-y-10 font-secondary h-screen text-base text-slate-200 text-left'>
+                </div>
+
+                
+
+                <ul className='mt-20 flex flex-col space-y-10 font-secondary h-screen text-base text-slate-200 text-left ml-5'>
                     <Link to="/"><li className='hover:underline hover:underline-offset-8'>00 HOME</li></Link>
                     <Link to="/destination"><li className='hover:underline hover:underline-offset-8'>01 DESTINATION</li></Link>
                     <Link to="/crew"><li className='hover:underline hover:underline-offset-8'>02 CREW</li></Link>
@@ -52,7 +53,11 @@ function Header(){
 
                 </ul>
 
-            </div>
+            </div>:
+             <button>
+                <img src={Menu} alt='hamburger menu' className='visible md:hidden w-8 h-8 absolute right-10' onClick={ToggleSide}/>
+         
+            </button>
             
         }
             
