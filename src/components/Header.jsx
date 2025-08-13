@@ -1,8 +1,9 @@
 import Logo from '../assets/images/shared/logo.svg';
 import Menu from '../assets/images/shared/icon-hamburger.svg';
-import Closed from '../assets/images/shared/icon-close.svg';
 import { Link } from 'react-router-dom';
+import Closed from '../assets/images/shared/icon-close.svg';
 import { useState } from 'react';
+
 
 
 function Header(){
@@ -30,22 +31,22 @@ function Header(){
                     <Link to="/technology"><li className='hover:underline hover:underline-offset-8'>03 TECHNOLOGY</li></Link>
 
                 </ul>
-            
+                
+        
             </div>
-            {isOpen ? 
+            {
+                isOpen ?
 
-            <div className="w-3/4 h-screen backdrop-blur-lg bg-white/10 visible md:hidden absolute right-0 top-0">
+                <div className='w-3/4 h-screen backdrop-blur-lg bg-white/10 visible md:hidden absolute right-0 top-0'>
                 <div className='flex justify-end mr-10 mt-10'>
                     <button>
-                        <img src={Closed} alt="exit button" onClick={ToggleSide}/>
-
+                        <img src={Closed} alt='exit button' onClick={ToggleSide}/>
                     </button>
 
                 </div>
+            
 
-                
-
-                <ul className='mt-20 flex flex-col space-y-10 font-secondary h-screen text-base text-slate-200 text-left ml-5'>
+                <ul className='flex flex-col space-y-10 font-secondary h-screen text-base text-slate-200 ml-5 mt-20'>
                     <Link to="/"><li className='hover:underline hover:underline-offset-8'>00 HOME</li></Link>
                     <Link to="/destination"><li className='hover:underline hover:underline-offset-8'>01 DESTINATION</li></Link>
                     <Link to="/crew"><li className='hover:underline hover:underline-offset-8'>02 CREW</li></Link>
@@ -53,18 +54,19 @@ function Header(){
 
                 </ul>
 
+                
             </div>:
-             <button>
-                <img src={Menu} alt='hamburger menu' className='visible md:hidden w-8 h-8 absolute right-10' onClick={ToggleSide}/>
-         
+            <button onClick={ToggleSide}>
+                <img src={Menu} alt='hamburger menu' className='visible md:hidden w-8 h-8 absolute right-10 top-10'/>
+     
             </button>
-            
-        }
-            
-        
-            
-            
 
+            }
+            
+            
+           
+
+            
 
         
         </div>
