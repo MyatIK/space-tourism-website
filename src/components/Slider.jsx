@@ -15,7 +15,7 @@ function Slider(){
             
                 {data.crew.map(crewMapped=>{
                     return (
-                    <div className=" mt-10 w-5/6 grid md:grid-cols-2 gap-3 w-full flex-shrink-0 items-center transition-transform ease-out duration-500" 
+                    <div className=" mt-10 w-5/6 grid md:grid-cols-2 gap-3 w-full shrink-0 items-center transition-transform ease-out duration-500" 
                             style={{transform:`translateX(-${current * 100}%)`}}>
                         <div className='w-5/6 mx-auto relative order-last md:order-first'>
                             <div>

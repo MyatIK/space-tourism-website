@@ -23,7 +23,7 @@ function Header(){
             <div className='sm:48 border-t border-gray-300 mt-6 invisible sm:visible'></div>
 
            
-            <div className="p-5 w-1/2  md:backdrop-blur-sm md:bg-white/20 invisible md:visible absolute right-0">
+            <div className="p-5 w-1/2  md:backdrop-blur-xs md:bg-white/20 invisible md:visible absolute right-0">
                 <ul className='flex inline mr-10 space-x-8 font-secondary text-base text-slate-200 ml-20'>
                     <Link to="/"><li className='hover:underline hover:underline-offset-8'>00 HOME</li></Link>
                     <Link to="/destination"><li className='hover:underline hover:underline-offset-8'>01 DESTINATION</li></Link>
