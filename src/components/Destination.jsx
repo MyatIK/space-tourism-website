@@ -28,8 +28,8 @@ function Destination(){
     const PlanetImage=()=>{
         if (selectedItem == "Moon"){
             return (
-            <div>
-                <img className="w-4/5 mt-2 ml-10"  src={Moon}/>
+            <div className="w-full justify-items-center">
+                <img className="w-2/5 md:w-4/5 mt-2 ml-10"  src={Moon}/>
             </div>
             )
 
@@ -37,7 +37,7 @@ function Destination(){
         if (selectedItem == "Mars"){
             return (
             <div>
-                <img className="w-4/5 mt-2 ml-10"  src={Mars}/>
+                <img className="w-2/5 md:w-4/5 mt-2 ml-10"  src={Mars}/>
             </div>
             )
 
@@ -45,7 +45,7 @@ function Destination(){
         if (selectedItem == "Europa"){
             return(
             <div>
-                <img className="w-4/5 mt-2 ml-10"  src={Europa}/>
+                <img className="w-2/5 md:w-4/5 mt-2 ml-10"  src={Europa}/>
             </div>
             )
 
@@ -53,7 +53,7 @@ function Destination(){
         else if (selectedItem == "Titan"){
             return(
             <div>
-                <img className="w-4/5 mt-2 ml-10"  src={Titan}/>
+                <img className="w-2/5 md:w-4/5 mt-2 ml-10"  src={Titan}/>
             </div>
             )
 
@@ -63,18 +63,20 @@ function Destination(){
     return(
         <>
        
-            <div className="bg-cover h-screen overflow-hidden" style={{backgroundImage: `url(${Background_Desktop})`}}>
+            <div className="bg-cover min-h-screen w-full" style={{backgroundImage: `url(${Background_Desktop})`}}>
                 <Header/>
                 <div className="ml-20 flex mt-10 space-x-3 text-2xl font-secondary text-white">
                     <h2>01</h2>
                     <h2>PICK YOUR DESTINATION</h2>
                 </div>  
                 
-                <div className="grid lg:grid-cols-2 h-full mt-10 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 h-full mt-10 justify-items-center">
                     
-                    <div>
-                        {PlanetImage()}
-                    </div>
+                    {PlanetImage()}
+
+                   
+                    
+                
 
                     {data.destinations.filter(planetInfo=>planetInfo.name == selectedItem).map((planetMapped,index)=>{
                         return(
@@ -82,7 +84,7 @@ function Destination(){
                 
                         <div >
                             
-                            <div className="block text-white w-5/6">
+                            <div className="mx-auto md:mx-0 block text-white md:w-5/6 w-screen justify-items-center md:justify-items-start">
                                 
                                 <ul className="flex space-x-5 text-base font-secondary text-slate-200">
                                     {planetNav}

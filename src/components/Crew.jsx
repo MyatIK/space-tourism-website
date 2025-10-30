@@ -16,7 +16,7 @@ function Crew(){
                     <h2>MEET YOUR CREW</h2>
 
             </div>
-            <div className="w-full max-w-5xl mx-auto">
+            <div className="w-full md:max-w-5xl mx-auto">
                 <Slider/>   
 
             </div>
